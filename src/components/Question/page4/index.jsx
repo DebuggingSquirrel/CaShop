@@ -5,10 +5,10 @@ import Header from "../../common/Header";
 import * as Q from "../style";
 import { useNavigate } from "react-router-dom";
 
-const Question1 = () => {
-  const { Face1, Face2 } = useQuestion();
+const Question4 = () => {
+  const { Mouth1, Mouth2 } = useQuestion();
   const { useName } = useEmoji();
-  const [FaceState, SetFaceState] = useState("");
+  const [mouthState, SetMouthState] = useState("");
   const navigate = useNavigate();
 
   return (
@@ -16,35 +16,33 @@ const Question1 = () => {
       <Header />
       <Q.QuestionBox>
         <Q.QuestionInfoBox>
-          <Q.QuestionText>{useName}는 어떤 얼굴형인가요?</Q.QuestionText>
+          <Q.QuestionText>{useName}는 어떤 입 모양인가요?</Q.QuestionText>
           <Q.QuestionButtonBox>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              {Face1.map((key) => (
-                <Q.QuestionListButton onClick={() => SetFaceState(key.face)}>
-                  {key.face}
+              {Mouth1.map((key) => (
+                <Q.QuestionListButton onClick={() => SetMouthState(key.mouth)}>
+                  {key.mouth}
                 </Q.QuestionListButton>
               ))}
             </div>
             <div>
-              {Face2.map((key) => (
-                <Q.QuestionListButton onClick={() => SetFaceState(key.face)}>
-                  {key.face}
+              {Mouth2.map((key) => (
+                <Q.QuestionListButton onClick={() => SetMouthState(key.mouth)}>
+                  {key.mouth}
                 </Q.QuestionListButton>
               ))}
             </div>
           </Q.QuestionButtonBox>
-          <Q.QuestionNextButton onClick={() => navigate("/question/2")}>
-            다음으로
-          </Q.QuestionNextButton>
+          <Q.QuestionNextButton>다음으로</Q.QuestionNextButton>
           <Q.Text>특징을 직접 서술 할래요</Q.Text>
         </Q.QuestionInfoBox>
         <div>
           <Q.EmojiListBox>
-            <Q.Test style={{}}>
+            <Q.Test>
               <Q.EmojiList></Q.EmojiList>
             </Q.Test>
             <Q.EmojiBox>
-              <Q.Emoji>{FaceState}</Q.Emoji>
+              <Q.Emoji>{mouthState}</Q.Emoji>
             </Q.EmojiBox>
             <Q.UserName>{useName}</Q.UserName>
           </Q.EmojiListBox>
@@ -54,4 +52,4 @@ const Question1 = () => {
   );
 };
 
-export default Question1;
+export default Question4;

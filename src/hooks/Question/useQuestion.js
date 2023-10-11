@@ -2,48 +2,92 @@ const useQuestion = () => {
   const Face1 = [
     {
       face: "동그란",
-      value: "1",
+      value: "round",
     },
     {
       face: "길쭉한",
-      value: "2",
+      value: "elongated",
     },
   ];
 
   const Face2 = [
     {
       face: "각진",
-      value: "3",
+      value: "angularity",
     },
     {
-      face: "길쭉한",
-      value: "4",
+      face: "뾰족한",
+      value: "pointed",
     },
   ];
 
   const Eyes1 = [
     {
-      eyes: "눈1",
-      value: "1",
+      eyes: "동그란",
+      value: "round",
     },
     {
-      eyes: "눈2",
-      value: "2",
+      eyes: "길쭉한",
+      value: "elongated",
     },
   ];
 
   const Eyes2 = [
     {
-      eyes: "눈3",
-      value: "3",
+      eyes: "처진",
+      value: "sagging",
     },
     {
-      eyes: "눈4",
-      value: "4",
+      eyes: "날카로운",
+      value: "Sharp",
     },
   ];
 
-  return { Face1, Face2, Eyes1, Eyes2 };
+  const Nose1 = [
+    {
+      nose: "뭉툭한",
+      value: "stubby",
+    },
+    {
+      nose: "오똑한",
+      value: "smart",
+    },
+  ];
+
+  const Nose2 = [
+    {
+      nose: "작은",
+      value: "Small",
+    },
+    {
+      nose: "큰",
+      value: "Big",
+    },
+  ];
+
+  const Mouth1 = [
+    {
+      mouth: "하트모양",
+      value: "Heart shape",
+    },
+    {
+      mouth: "도톰한",
+      value: "thick",
+    },
+  ];
+
+  const Mouth2 = [
+    {
+      mouth: "동그란",
+      value: "round",
+    },
+    {
+      mouth: "얇은",
+      value: "Thin",
+    },
+  ];
+
+  return { Face1, Face2, Eyes1, Eyes2, Nose1, Nose2, Mouth1, Mouth2 };
 };
 
 export default useQuestion;

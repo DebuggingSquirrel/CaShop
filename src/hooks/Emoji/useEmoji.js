@@ -9,7 +9,7 @@ const useEmoji = () => {
     console.log(useName);
   };
 
-  return { NameChange, useName };
+  return { NameChange, useName, setUserName };
 };
 
 export default useEmoji;
