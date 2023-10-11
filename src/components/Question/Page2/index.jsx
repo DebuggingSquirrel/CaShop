@@ -5,7 +5,7 @@ import Header from "../../common/Header";
 import * as Q from "../style";
 
 const Question2 = () => {
-  const { Face1, Face2 } = useQuestion();
+  const { Eyes1, Eyes2 } = useQuestion();
   const { useName } = useEmoji();
   const [FaceState, SetFaceState] = useState("");
 
@@ -14,17 +14,17 @@ const Question2 = () => {
       <Header />
       <Q.QuestionBox>
         <Q.QuestionInfoBox>
-          <Q.QuestionText>{useName}는 어떤 얼굴형인가요?</Q.QuestionText>
+          <Q.QuestionText>{useName}는 어떤 눈 모형인가요?</Q.QuestionText>
           <Q.QuestionButtonBox>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              {Face1.map((key) => (
+              {Eyes1.map((key) => (
                 <Q.QuestionListButton onClick={() => SetFaceState(key.face)}>
                   {key.face}
                 </Q.QuestionListButton>
               ))}
             </div>
             <div>
-              {Face2.map((key) => (
+              {Eyes2.map((key) => (
                 <Q.QuestionListButton onClick={() => SetFaceState(key.face)}>
                   {key.face}
                 </Q.QuestionListButton>

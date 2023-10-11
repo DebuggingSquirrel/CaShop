@@ -34,16 +34,16 @@ const useQuestion = () => {
 
   const Eyes2 = [
     {
-      eyes: "눈1",
-      value: "1",
+      eyes: "눈3",
+      value: "3",
     },
     {
-      eyes: "눈2",
-      value: "2",
+      eyes: "눈4",
+      value: "4",
     },
   ];
 
-  return { Face1, Face2 };
+  return { Face1, Face2, Eyes1, Eyes2 };
 };
 
 export default useQuestion;
