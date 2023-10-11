@@ -1,10 +1,14 @@
+import { RecoilRoot } from "recoil";
 import "./App.css";
+import { BrowserRouter, Router } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <div></div>
-    </div>
+    <RecoilRoot>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </RecoilRoot>
   );
 }
 
