@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
-const Maping = () => {
+const MapingPage = () => {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
     75,
@@ -48,4 +48,4 @@ const Maping = () => {
   return null;
 };
 
-export default Maping;
+export default MapingPage;
