@@ -3,7 +3,6 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const Maping = () => {
-  // Three.js의 기본 요소들을 생성
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
     75,

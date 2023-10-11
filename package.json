@@ -12,7 +12,11 @@
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
     "recoil": "^0.7.7",
+<<<<<<< HEAD
     "three": "^0.157.0",
+=======
+    "styled-components": "^6.0.8",
+>>>>>>> 7faa2fdc41562194b64d015a80326ddde12337f3
     "web-vitals": "^2.1.4"
   },
   "scripts": {
