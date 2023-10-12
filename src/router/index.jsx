@@ -11,24 +11,17 @@ import Question3Page from "../pages/QuestionPage/Question3Page";
 import Question4Page from "../pages/QuestionPage/Question4Page";
 import DownloadPage from "../pages/DownloadPage/DownloadPage";
 
-import { Model } from "../assets/data/NewCharacter";
-import ModalMaping from "../components/3D_map/ModalMaping";
-
 export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<MyEmojiPage />} />
       <Route path="/maping" element={<MapingPage />} />
       <Route path="/question/1" element={<Question1Page />} />
-
       <Route path="/maping" element={<MapingPage />} />
-      {/* <Route path="/t" element={<Header />} /> */}
-
       <Route path="/question/2" element={<Question2Page />} />
       <Route path="/question/3" element={<Question3Page />} />
       <Route path="/question/4" element={<Question4Page />} />
       <Route path="/cashop/download" element={<DownloadPage />} />
-      <Route path="/test" element={<ModalMaping />} />
     </Routes>
   );
 }
