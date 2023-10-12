@@ -6,6 +6,7 @@ import { ForestMap2 } from "../../assets/data/ForestMap2";
 import { Physics } from "@react-three/cannon";
 import React, { Suspense } from "react";
 import { DirectionalLight } from "three";
+import { Model } from "../../assets/data/NewCharacter";
 
 extend({ OrbitControls });
 
@@ -48,6 +49,7 @@ const MapingPage = () => {
       <CameraSetup />
       <Suspense fallback={null}>
         <Physics>
+          <Model />
           <ForestMap2 />
         </Physics>
         <Controls />

@@ -9,3 +9,8 @@ export const PullImgAtom = atom({
   key: "PullImgAtom",
   default: "",
 });
+
+export const CutImgAtom = atom({
+  key: "CutImgAtom",
+  default: "",
+});

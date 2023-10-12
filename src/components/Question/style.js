@@ -56,6 +56,11 @@ export const QuestionListButton = styled.div`
 
   margin-left: 20px;
   margin-bottom: 15px;
+
+  .selected {
+    background-color: red; /* 여기에 원하는 배경색을 지정합니다 */
+    color: white; /* 텍스트 색상을 설정합니다 */
+  }
 `;
 
 export const QuestionInfoBox = styled.div`
@@ -104,10 +109,12 @@ export const EmojiListBox = styled.div`
 export const Test = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 `;
 
 export const EmojiList = styled.div`
   display: flex;
+  justify-content: center;
 
   width: 248px;
   height: 245px;
@@ -115,24 +122,8 @@ export const EmojiList = styled.div`
 
   margin-top: 16px;
 
-  @keyframes loop {
-    0% {
-      top: 0px;
-      left: 0px;
-    }
-    50% {
-      top: 0px;
-      left: 20px;
-    }
-    100% {
-      top: 0px;
-      left: 0px;
-    }
-  }
-
   img {
-    position: relative;
-    animation: loop 1.1s infinite;
+    margin-left: 8px;
   }
 `;
 

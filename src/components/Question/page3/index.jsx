@@ -4,7 +4,7 @@ import useQuestion from "../../../hooks/Question/useQuestion";
 import Header from "../../common/Header";
 import * as Q from "../style";
 import { useNavigate } from "react-router-dom";
-import PageImg from "../../../assets/image/page.svg";
+import PageImg from "../../../assets/image/pen.gif";
 import CASHOP from "../../../assets/image/CASHOP.svg";
 
 const Question3 = () => {
