@@ -17,7 +17,9 @@ export default function Router() {
       <Route path="/" element={<MyEmojiPage />} />
       <Route path="/maping" element={<MapingPage />} />
       <Route path="/question/1" element={<Question1Page />} />
+
       <Route path="/maping" element={<MapingPage />} />
+
       <Route path="/question/2" element={<Question2Page />} />
       <Route path="/question/3" element={<Question3Page />} />
       <Route path="/question/4" element={<Question4Page />} />
