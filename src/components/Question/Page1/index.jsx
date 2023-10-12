@@ -13,6 +13,7 @@ const Question1 = () => {
   const [FaceState, setFaceState] = useState("");
   // console.log(FaceState);
   const navigate = useNavigate();
+  const [tset, setTest] = useState();
 
   return (
     <Q.QuestionContainer>
@@ -31,6 +32,10 @@ const Question1 = () => {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 {Face1.map((key, index) => (
                   <Q.QuestionListButton
+                    style={{
+                      backgroundColor:
+                        FaceState == key.face ? "#5E6279" : "#282d4b",
+                    }}
                     onClick={() => {
                       array.splice(1, 1, key.value);
                       setFaceState(key.face);
@@ -44,6 +49,10 @@ const Question1 = () => {
               <div>
                 {Face2.map((key, index) => (
                   <Q.QuestionListButton
+                    style={{
+                      backgroundColor:
+                        FaceState == key.face ? "#5E6279" : "#282d4b",
+                    }}
                     onClick={() => {
                       array.splice(1, 1, key.value);
                       setFaceState(key.face);

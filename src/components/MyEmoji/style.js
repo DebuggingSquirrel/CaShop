@@ -51,6 +51,7 @@ export const Input = styled.input`
   outline: none;
 
   font-size: 15px;
+  font-family: Pretendard7;
 
   text-align: center;
 

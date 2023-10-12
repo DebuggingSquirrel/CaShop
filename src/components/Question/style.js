@@ -39,7 +39,7 @@ export const QuestionListButton = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  background-color: #282d4b;
+  /* background-color: #282d4b; */
 
   width: 200px;
   height: 70px;

@@ -3,10 +3,12 @@ const useQuestion = () => {
     {
       face: "동그란",
       value: "round",
+      test: "Red",
     },
     {
       face: "길쭉한",
       value: "elongated",
+      test: "Red",
     },
   ];
 
@@ -14,10 +16,12 @@ const useQuestion = () => {
     {
       face: "각진",
       value: "angularity",
+      test: "Red",
     },
     {
       face: "뾰족한",
       value: "pointed",
+      test: "Red",
     },
   ];
 
