@@ -1,12 +1,14 @@
 import { useEffect, useRef } from "react";
 import { extend, Canvas, useThree, useFrame } from "@react-three/fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { ForestMap2 } from "../../assets/data/ForestMap2";
-import { Physics } from "@react-three/cannon";
+import { Physics, usePlane } from "@react-three/cannon";
+import { Sky } from "@react-three/drei"; // Sky 추가
 import React, { Suspense } from "react";
 import { DirectionalLight } from "three";
 import { Model } from "../../assets/data/NewCharacter";
+import { ModelHi } from "../../assets/data/HiCharacter";
+import { ModelDancing } from "../../assets/data/DancingGirl";
+import { ForestMap2 } from "../../assets/data/ForestMap2";
 
 extend({ OrbitControls });
 
@@ -23,10 +25,10 @@ const Controls = () => {
       ref={orbitRef}
       args={[camera, gl.domElement]}
       enableZoom={true}
-      dampingFactor={2.0} // 카메라 움직임의 감쇄를 조절
-      rotateSpeed={0.3} // 마우스 왼쪽 버튼을 클릭하고 드래그할 때 화면 회전 속도
-      panSpeed={5} // 마우스 오른쪽 버튼을 드래그하여 화면을 패닝(이동)할 때의 속도
-      zoomSpeed={1} // 마우스 휠로 화면 확대/축소
+      dampingFactor={2.0}
+      rotateSpeed={0.3}
+      panSpeed={5}
+      zoomSpeed={1}
     />
   );
 };
@@ -48,8 +50,20 @@ const MapingPage = () => {
       <directionalLight intensity={2} position={[1, 20, 5]} />
       <CameraSetup />
       <Suspense fallback={null}>
+        <Sky
+          distance={4500}
+          turbidity={100}
+          rayleigh={0.075}
+          mieCoefficient={0.02}
+          mieDirectionalG={0.8}
+          inclination={0.49}
+          azimuth={0.25}
+          sunPosition={[1, 0, 0]}
+        />
         <Physics>
-          <Model />
+          <ModelDancing />
+          <ModelHi />
+
           <ForestMap2 />
         </Physics>
         <Controls />
