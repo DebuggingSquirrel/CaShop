@@ -7,19 +7,21 @@ import { useNavigate } from "react-router-dom";
 import PageImg from "../../../assets/image/page.svg";
 import CASHOP from "../../../assets/image/CASHOP.svg";
 
-const Question1 = () => {
-  const { Face1, Face2 } = useQuestion();
-  const { useName, array } = useEmoji();
-  const [FaceState, setFaceState] = useState("");
-  // console.log(FaceState);
+const Question3 = () => {
+  const { Nose1, Nose2 } = useQuestion();
+  const { useName } = useEmoji();
+  const [noseState, SetNoseState] = useState("");
   const navigate = useNavigate();
+
+  let storedData = localStorage.getItem("arrayData");
+  let myArray = JSON.parse(storedData);
 
   return (
     <Q.QuestionContainer>
       <Header />
       <Q.QuestionBox>
         <Q.QuestionInfoBox>
-          <Q.QuestionText>{useName}는 어떤 얼굴형인가요?</Q.QuestionText>
+          <Q.QuestionText>{useName}는 어떤 코 모양인가요?</Q.QuestionText>
           <Q.QuestionButtonBox>
             <div
               style={{
@@ -29,58 +31,59 @@ const Question1 = () => {
               }}
             >
               <div style={{ display: "flex", flexDirection: "column" }}>
-                {Face1.map((key, index) => (
+                {Nose1.map((key, index) => (
                   <Q.QuestionListButton
                     onClick={() => {
-                      array.splice(1, 1, key.value);
-                      setFaceState(key.face);
-                      localStorage.setItem("arrayData", JSON.stringify(array));
+                      myArray[5] = key.value;
+                      SetNoseState(key.nose);
+                      localStorage.setItem(
+                        "arrayData",
+                        JSON.stringify(myArray)
+                      );
                     }}
                   >
-                    {key.face}
+                    {key.nose}
                   </Q.QuestionListButton>
                 ))}
               </div>
               <div>
-                {Face2.map((key, index) => (
+                {Nose2.map((key, index) => (
                   <Q.QuestionListButton
                     onClick={() => {
-                      array.splice(1, 1, key.value);
-                      setFaceState(key.face);
-                      localStorage.setItem("arrayData", JSON.stringify(array));
+                      myArray[5] = key.value;
+                      SetNoseState(key.nose);
+                      localStorage.setItem(
+                        "arrayData",
+                        JSON.stringify(myArray)
+                      );
                     }}
                   >
-                    {key.face}
+                    {key.nose}
                   </Q.QuestionListButton>
                 ))}
               </div>
             </div>
-
             <Q.QuestionInput placeholder="추가사항을 적어주세요. (선택)"></Q.QuestionInput>
           </Q.QuestionButtonBox>
-
           <Q.QuestionNextButton
-            onClick={() => {
-              navigate("/question/2");
-            }}
-            style={{ backgroundColor: FaceState ? "#6346FF" : "white" }}
+            onClick={() => navigate("/question/4")}
+            style={{ backgroundColor: noseState ? "#6346FF" : "white" }}
           >
             다음으로
           </Q.QuestionNextButton>
-          {/* <Q.Text>특징을 직접 서술 할래요</Q.Text> */}
         </Q.QuestionInfoBox>
         <div>
           <Q.EmojiListBox>
             <Q.ChahopBox>
               <Q.Chahop src={CASHOP} style={{ width: "100px" }} />
             </Q.ChahopBox>
-            <Q.Test style={{}}>
+            <Q.Test>
               <Q.EmojiList>
                 <img src={PageImg} />
               </Q.EmojiList>
             </Q.Test>
             <Q.EmojiBox>
-              <Q.Emoji>{FaceState}</Q.Emoji>
+              <Q.Emoji>{noseState}</Q.Emoji>
             </Q.EmojiBox>
             <Q.UserName>{useName}</Q.UserName>
           </Q.EmojiListBox>
@@ -90,4 +93,4 @@ const Question1 = () => {
   );
 };
 
-export default Question1;
+export default Question3;

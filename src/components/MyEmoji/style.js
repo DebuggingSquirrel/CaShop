@@ -65,13 +65,19 @@ export const EmojiNextBox = styled.button`
   width: 130px;
   height: 60px;
 
-  background-color: white;
+  /* background-color: white; */
 
   border-radius: 43px;
+  border: 0;
 
   font-size: 22px;
   font-family: Pretendard7;
   color: #b0b8c1;
+
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const EmojiBox = styled.div`
@@ -107,7 +113,26 @@ export const EmojiList = styled.div`
   height: 245px;
   background-color: #0f111e;
 
-  margin-top: 50px;
+  margin-top: 16px;
+  @keyframes loop {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+    50% {
+      top: 0px;
+      left: 20px;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+  img {
+    position: relative;
+    animation: loop 1.1s infinite;
+  }
 `;
 
 export const UserName = styled.div`
@@ -120,4 +145,14 @@ export const UserName = styled.div`
   color: #ffffff;
   font-size: 24px;
   font-family: Pretendard7;
+`;
+
+export const ChahopBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Chahop = styled.img`
+  margin-top: 16px;
 `;
