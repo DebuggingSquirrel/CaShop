@@ -71,10 +71,7 @@ export function ModelHi(props) {
         </group>
       </group>
 
-      <Balloon
-        position={[20.28, 6, -3.984]}
-        text="(캐릭터에 말을 걸어주세요)"
-      />
+      <Balloon position={[20.28, 6, -3.984]} text="어? 새로운 친구네?" />
     </group>
   );
 }
