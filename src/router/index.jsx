@@ -9,7 +9,6 @@ import { useEffect } from "react";
 import Question2Page from "../pages/QuestionPage/Question2Page";
 import Question3Page from "../pages/QuestionPage/Question3Page";
 import Question4Page from "../pages/QuestionPage/Question4Page";
-import MapingPage from "../components/3D_map/three";
 import DownloadPage from "../pages/DownloadPage/DownloadPage";
 import Loading from "../components/common/Loading";
 
