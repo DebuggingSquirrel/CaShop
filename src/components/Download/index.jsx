@@ -51,9 +51,13 @@ const Download = () => {
             </D.ChahopBox>
 
             <D.Test style={{}}>
-              <D.DownloadList ref={cardRef}>
+              <D.DownloadList>
                 {/* {pullImg && ( */}
-                <img src={pullImg} style={{ borderRadius: "15px" }} />
+                <img
+                  ref={cardRef}
+                  src={pullImg}
+                  style={{ borderRadius: "15px", height: "250px" }}
+                />
                 {/* )} */}
               </D.DownloadList>
             </D.Test>
