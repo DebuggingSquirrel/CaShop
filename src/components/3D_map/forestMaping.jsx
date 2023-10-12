@@ -7,6 +7,9 @@ import React from "react";
 import { ForestMap2 } from "../../assets/data/ForestMap2";
 import * as THREE from "three";
 import test from "../../assets/image/test.jpg";
+import { ModelHi } from "../../assets/data/HiCharacter";
+import { ModelDancing } from "../../assets/data/DancingGirl";
+import { Sky } from "@react-three/drei"; // Sky 추가
 
 extend({ OrbitControls });
 
@@ -81,7 +84,7 @@ function Character() {
   }, [position]);
 
   return (
-    <group position={position}>
+    <group position={position} rotation={[0, Math.PI / 2, 0]}>
       {/* 머리 */}
       <mesh position={[0, 4, 0]} rotation={[0, Math.PI / 2, 0]}>
         <sphereGeometry args={[1, 10, 10]} />
@@ -121,14 +124,48 @@ function Character() {
   );
 }
 
+const texts = [
+  "3D 작품 그냥 폼미 ..",
+  "하 하루만 시간이 더 있었다면 ..",
+  "해커톤 재밌네요",
+  "오늘도 열심히 코딩 중",
+];
+
+function getRandomText() {
+  const randomIndex = Math.floor(Math.random() * texts.length);
+  return texts[randomIndex];
+}
+
 function App() {
+  const [text, setText] = useState("...");
+  const [showInput, setShowInput] = useState(false);
+
+  const handleModelHiClick = () => {
+    setText(getRandomText());
+
+    setTimeout(() => {
+      setText("...");
+    }, 3000);
+  };
   return (
     <Canvas style={{ width: "100vw", height: "100vh" }}>
       <directionalLight intensity={2} position={[-1, 10, 1]} />
       <CameraSetup />
       <Controls />
       <Physics>
+        <Sky
+          distance={10000}
+          turbidity={50}
+          rayleigh={0.075}
+          mieCoefficient={0.02}
+          mieDirectionalG={0.8}
+          inclination={0.49}
+          azimuth={0.25}
+          sunPosition={[1, 0, 0]}
+        />
         <ForestMap2 />
+        <ModelDancing />
+        <ModelHi text={text} onClick={handleModelHiClick} />
         <Character />
       </Physics>
     </Canvas>

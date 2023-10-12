@@ -36,7 +36,7 @@ const Balloon = ({ position, text }) => {
   );
 };
 
-export function ModelHi(props) {
+export function ModelHi({ text, ...props }) {
   const group = useRef();
   const { nodes, materials, animations } = useGLTF("/HiCharacter.gltf");
   const { actions } = useAnimations(animations, group);
@@ -71,7 +71,7 @@ export function ModelHi(props) {
         </group>
       </group>
 
-      <Balloon position={[20.28, 6, -3.984]} text="어? 새로운 친구네?" />
+      <Balloon position={[20.28, 6, -3.984]} text={text} />
     </group>
   );
 }
