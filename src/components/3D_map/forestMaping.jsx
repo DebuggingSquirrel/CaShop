@@ -63,6 +63,7 @@ const MapingPage = () => {
         <Physics>
           <ModelDancing />
           <ModelHi />
+          <Model />
 
           <ForestMap2 />
         </Physics>
