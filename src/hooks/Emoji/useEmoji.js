@@ -1,5 +1,9 @@
 import { useRecoilState } from "recoil";
-import { PullImgAtom, UserNameAtom } from "../../stores/User/user.store";
+import {
+  CutImgAtom,
+  PullImgAtom,
+  UserNameAtom,
+} from "../../stores/User/user.store";
 import { useState } from "react";
 import { customAxios } from "../../libs/customAxios";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const useEmoji = () => {
   const [useName, setUserName] = useRecoilState(UserNameAtom);
   const [pullImg, setPullImg] = useRecoilState(PullImgAtom);
-  const [cutImg, setCutImg] = useState("");
+  const [cutImg, setCutImg] = useRecoilState(CutImgAtom);
   const [loading, setLoading] = useState(false);
   const NameChange = (e) => {
     setUserName(e.target.value);
@@ -46,6 +50,7 @@ const useEmoji = () => {
       setLoading(false);
       navigate("/cashop/download");
     } catch (e) {
+      setLoading(false);
       alert("error.. 다시 시도해주세요");
       console.log(e);
     }
@@ -61,6 +66,7 @@ const useEmoji = () => {
     pullImg,
     setPullImg,
     loading,
+    cutImg,
   };
 };
 

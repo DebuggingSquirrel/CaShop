@@ -10,7 +10,9 @@ import Question2Page from "../pages/QuestionPage/Question2Page";
 import Question3Page from "../pages/QuestionPage/Question3Page";
 import Question4Page from "../pages/QuestionPage/Question4Page";
 import DownloadPage from "../pages/DownloadPage/DownloadPage";
-import Loading from "../components/common/Loading";
+
+import { Model } from "../assets/data/NewCharacter";
+import ModalMaping from "../components/3D_map/ModalMaping";
 
 export default function Router() {
   return (
@@ -26,7 +28,7 @@ export default function Router() {
       <Route path="/question/3" element={<Question3Page />} />
       <Route path="/question/4" element={<Question4Page />} />
       <Route path="/cashop/download" element={<DownloadPage />} />
-      <Route path="/test" element={<Loading />} />
+      <Route path="/test" element={<ModalMaping />} />
     </Routes>
   );
 }

@@ -7,6 +7,7 @@ export const LoadingContainer = styled.div`
 `;
 
 export const Text = styled.div`
+  text-align: center;
   font-size: 28px;
   color: white;
   font-family: Pretendard7;

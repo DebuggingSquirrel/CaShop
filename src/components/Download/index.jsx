@@ -18,12 +18,14 @@ const Download = () => {
       <D.DownloadBox>
         <D.DownloadInfoBox>
           <D.Text>
-            케샵 캐릭터 완성!
+            캐샵 캐릭터 완성!
             <br />더 다양한 캐릭터들을 만들어보세요.
           </D.Text>
           <D.DownloadButtonBox>
             <div style={{ display: "flex" }}>
-              <D.MapButton>맵 구경하기</D.MapButton>
+              <D.MapButton onClick={() => navigate("/maping")}>
+                맵 구경하기
+              </D.MapButton>
               <D.DownloadButton onClick={onDownloadBtn}>
                 <img src={download} />
                 이미지 저장

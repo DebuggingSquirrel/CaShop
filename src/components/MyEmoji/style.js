@@ -33,9 +33,13 @@ export const Text = styled.div`
 `;
 
 export const EmojiInputBox = styled.div`
+  height: 50px;
   margin-bottom: 35px;
 `;
 export const Input = styled.input`
+  display: flex;
+  align-items: center;
+
   width: 250px;
   height: 50px;
 
@@ -54,8 +58,12 @@ export const Input = styled.input`
     text-align: center;
   }
 
+  &:hover {
+    border: 2px solid #8e93ff;
+  }
+
   &:focus {
-    border: 2px solid #5e6279;
+    border: 2px solid #6346ff;
   }
 `;
 
@@ -75,7 +83,9 @@ export const EmojiNextBox = styled.button`
   color: #b0b8c1;
 
   cursor: pointer;
+
   &:hover {
+    /* background-color: #5233fb; */
     opacity: 0.8;
   }
 `;
@@ -108,30 +118,15 @@ export const Test = styled.div`
 
 export const EmojiList = styled.div`
   display: flex;
+  justify-content: center;
 
   width: 248px;
   height: 245px;
   background-color: #0f111e;
 
   margin-top: 16px;
-  @keyframes loop {
-    0% {
-      top: 0px;
-      left: 0px;
-    }
-    50% {
-      top: 0px;
-      left: 20px;
-    }
-    100% {
-      top: 0px;
-      left: 0px;
-    }
-  }
-
   img {
-    position: relative;
-    animation: loop 1.1s infinite;
+    margin-left: 8px;
   }
 `;
 

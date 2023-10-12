@@ -3,8 +3,9 @@ import Name from "../../assets/image/Name.svg";
 import Header from "../common/Header";
 import useEmoji from "../../hooks/Emoji/useEmoji";
 import { useNavigate } from "react-router-dom";
-import PageImg from "../../assets/image/page.svg";
+// import PageImg from "../../assets/image/page.svg";
 import CASHOP from "../../assets/image/CASHOP.svg";
+import PageImg from "../../assets/image/pen.gif";
 
 const MyEmoji = () => {
   const { NameChange, useName } = useEmoji();
