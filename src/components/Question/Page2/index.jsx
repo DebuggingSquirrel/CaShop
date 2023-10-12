@@ -33,6 +33,10 @@ const Question2 = () => {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 {Eyes1.map((key, index) => (
                   <Q.QuestionListButton
+                    style={{
+                      backgroundColor:
+                        eyesState == key.eyes ? "#5E6279" : "#282d4b",
+                    }}
                     onClick={() => {
                       myArray[3] = key.value;
                       SetEyesState(key.eyes);
@@ -49,11 +53,15 @@ const Question2 = () => {
               <div>
                 {Eyes2.map((key, index) => (
                   <Q.QuestionListButton
+                    style={{
+                      backgroundColor:
+                        eyesState == key.eyes ? "#5E6279" : "#282d4b",
+                    }}
                     onClick={() => {
                       myArray[3] = key.value;
                       SetEyesState(key.eyes);
                       localStorage.setItem(
-                        "arrayData",
+                        "arrayDatfa",
                         JSON.stringify(myArray)
                       );
                     }}

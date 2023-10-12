@@ -37,6 +37,10 @@ const Question4 = () => {
                   <div style={{ display: "flex", flexDirection: "column" }}>
                     {Mouth1.map((key, index) => (
                       <Q.QuestionListButton
+                        style={{
+                          backgroundColor:
+                            mouthState == key.mouth ? "#5E6279" : "#282d4b",
+                        }}
                         onClick={() => {
                           myArray[7] = key.value;
                           SetMouthState(key.mouth);
@@ -53,6 +57,10 @@ const Question4 = () => {
                   <div>
                     {Mouth2.map((key, index) => (
                       <Q.QuestionListButton
+                        style={{
+                          backgroundColor:
+                            mouthState == key.mouth ? "#5E6279" : "#282d4b",
+                        }}
                         onClick={() => {
                           myArray[7] = key.value;
                           SetMouthState(key.mouth);

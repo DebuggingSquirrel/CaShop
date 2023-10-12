@@ -33,6 +33,10 @@ const Question3 = () => {
               <div style={{ display: "flex", flexDirection: "column" }}>
                 {Nose1.map((key, index) => (
                   <Q.QuestionListButton
+                    style={{
+                      backgroundColor:
+                        noseState == key.nose ? "#5E6279" : "#282d4b",
+                    }}
                     onClick={() => {
                       myArray[5] = key.value;
                       SetNoseState(key.nose);
@@ -49,6 +53,10 @@ const Question3 = () => {
               <div>
                 {Nose2.map((key, index) => (
                   <Q.QuestionListButton
+                    style={{
+                      backgroundColor:
+                        noseState == key.nose ? "#5E6279" : "#282d4b",
+                    }}
                     onClick={() => {
                       myArray[5] = key.value;
                       SetNoseState(key.nose);
